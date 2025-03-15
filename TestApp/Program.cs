@@ -25,6 +25,8 @@ namespace TestApp
                 Console.Write(prompt);
                 if (decimal.TryParse(Console.ReadLine(), out number))
                     return number;
+            Console.WriteLine("Choose operation (+, -, *, /): ");
+            string operation = Console.ReadLine();
 
                 Console.WriteLine("Invalid input. Please enter a valid number.");
             }
