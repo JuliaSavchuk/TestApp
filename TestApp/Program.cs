@@ -5,14 +5,14 @@
         static void Main(string[] args)
         {
             Console.WriteLine("=======Mathematical action=======");
-
+//1
             Console.Write("Enter num1: ");
             decimal num1 = Convert.ToDecimal(Console.ReadLine());
-
+//2
             Console.Write("Enter num2: ");
 
             decimal num2 = Convert.ToDecimal(Console.ReadLine());
-
+//3
             Console.WriteLine("Choose operation (+, -, *, /): ");
             string operation = Console.ReadLine();
 
