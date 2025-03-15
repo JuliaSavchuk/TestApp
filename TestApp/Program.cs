@@ -13,9 +13,41 @@
 
             decimal num2 = Convert.ToDecimal(Console.ReadLine());
 
+            Console.WriteLine("Choose operation (+, -, *, /): ");
+            string operation = Console.ReadLine();
 
-            Console.WriteLine($"Result:{num1+num2}");
+            decimal result = 0;
+            bool isValidOperation = true;
 
+            switch (operation)
+            {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    if (num2 != 0)
+                        result = num1 / num2;
+                    else
+                    {
+                        Console.WriteLine("Error: Division by zero is not allowed.");
+                        isValidOperation = false;
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Invalid operation.");
+                    isValidOperation = false;
+                    break;
+            }
+
+            if (isValidOperation)
+                Console.WriteLine($"Result: {result}");
         }
+
     }
 }
